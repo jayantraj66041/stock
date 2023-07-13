@@ -38,7 +38,7 @@ class StockPriceConsumer(SyncConsumer):
             self.send({
                 "type": "websocket.send", 
                 'text': json.dumps({
-                    "Stock Price": + stock_price,
+                    "Stock Price": stock_price,
                     "Average Price": avg,
                     "Suggestion": "Sale" if avg>actual_price else "Buy"
                 })
